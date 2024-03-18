@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  titanic_disaster_back:
+    container_name: titanic_disaster_back
+    build: ./titanic_disaster_back
+    ports:
+      - 8000:8000
+    networks:
+      - titanic_disaster
+
+  titanic_disaster_front:
+    container_name: titanic_disaster_front
+    build: ./titanic_disaster_front
+    ports:
+      - 3000:3000
+    networks:
+      - titanic_disaster
+    depends_on:
+      - titanic_disaster_back
+    environment:
+      - NEXT_PUBLIC_SERVER_URL=http://titanic_disaster_back:8000
+    # args:
+    #   - NEXT_PUBLIC_SERVER_URL=titanic_disaster_back:8000
+
+
+networks:
+  titanic_disaster:
+    driver: bridge
