@@ -21,19 +21,21 @@ Getting Started:
 
 1. Clone this repository:
 
-git clone https://github.com/Yalcael/titanic_disaster_project.git
+  git clone https://github.com/Yalcael/titanic_disaster_project.git
 
 2. Navigate to the project directory:
 
 cd titanic_disaster_project
 
-4. You should download the train.csv there : https://www.kaggle.com/c/titanic/data?select=train.csv // You should put it in the route of the project.
+3. You should download the train.csv there:
+   
+https://www.kaggle.com/c/titanic/data?select=train.csv // You should put it in the route of the project.
 
-5. Build and run the project using Docker Compose:
+4. Build and run the project using Docker Compose:
 
 docker-compose up --build
 
-6. Access the frontend at http://localhost:3000 and the backend API at http://localhost:8000.
+5. Access the frontend at http://localhost:3000 and the backend API at http://localhost:8000.
 
 Functionality:
 
